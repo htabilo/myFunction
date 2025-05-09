@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Color Favorito</title>
+</head>
+<body>
+  <h2>Mi color favorito es: <span id="colorMostrado">ninguno</span></h2>
+  
+  <input type="text" id="colorInput" placeholder="Ej: azul" />
+  <button onclick="guardarColor()">Guardar</button>
+
+  <script>
+    // Guardar en localStorage
+    function guardarColor() {
+      const color = document.getElementById("colorInput").value;
+      localStorage.setItem("colorFavorito", color);
+      mostrarColor();
+    }
+
+    // Mostrar desde localStorage
+    function mostrarColor() {
+      const color = localStorage.getItem("colorFavorito");
+      const span = document.getElementById("colorMostrado");
+      if (color) {
+        span.textContent = color;
+      } else {
+        span.textContent = "ninguno";
+      }
+    }
+
+    // Ejecutar al cargar la página
+    window.onload = mostrarColor;
+  </script>
+</body>
+</html>
