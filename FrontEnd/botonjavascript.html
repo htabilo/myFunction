@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+.boton{
+  padding: 12px 25px;
+
+  
+ 
+}
+
+.button{
+  border-radius: 8px;
+  border: rgb(255, 173, 211);
+cursor: pointer;
+
+}
+
+.button:hover{
+  background-color: blueviolet;
+}
+
+.boton:hover{
+  background-color: blue;
+}
+  </style>
+</head>
+<body>
+<p id="mensaje">Mensaje inicial</p>
+  <button class="boton" onclick="cambiarTexto()">haz clic</button>
+
+  
+
+  <script>
+ // function myFuncion(){
+   // alert("esta es la funcion")
+   function cambiarTexto(){ 
+    document.getElementById("mensaje").textContent = "texto cambiado"
+  }
+  </script>
+</body>
+</html>

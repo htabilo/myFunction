@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "is-prime": "^1.0.1",
+    "prime-number": "^2.0.0"
+  }
+}
